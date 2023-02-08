@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cpf-form.component.scss']
 })
 export class CpfFormComponent {
-
+  cpf = '';
 }

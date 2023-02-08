@@ -1,1 +1,15 @@
-<p>navbar works!</p>
+<header class="header">
+  <div class="header-user">
+    <img src="user-image.jpg" alt="User Image" />
+    <button class="btn btn-primary">Button</button>
+  </div>
+</header>
+
+<nav class="sidebar">
+  <button class="btn btn-link" (click)="isCollapsed = !isCollapsed">
+    <h2>Sidebar</h2>
+  </button>
+  <div [ngbCollapse]="isCollapsed">
+    <ng-content></ng-content>
+  </div>
+</nav>

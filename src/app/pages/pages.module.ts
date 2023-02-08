@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CpfFormComponent } from './CpfForm/cpf-form/cpf-form.component';
+import { CpfFormModule } from './main/componeents/CpfForm/cpf-form/cpf-form.module';
+import { MainModule } from './main/main.module';
+import { CpfInfoCardModule } from './main/componeents/cpf-info-card/cpf-info-card.module';
 
 
 
 @NgModule({
   declarations: [
-    CpfFormComponent
+    
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MainModule,
+    CpfInfoCardModule,
+    CpfFormModule
   ]
 })
 export class PagesModule { }
