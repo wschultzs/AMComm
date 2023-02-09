@@ -1,0 +1,46 @@
+.right-content {
+  gap: 20px;
+  
+  .bell-icon {
+    color: #125D79;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .bell-icon::before {
+    content: '7';
+    position: absolute;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    text-align: center;
+    border-radius: 100px;
+    padding: 5px;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .btn-viacredi {
+    border: 1px solid #125d79;
+    border-radius: 15px;
+    color: #125d79;
+    height: fit-content;
+  }
+}
+
+img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
