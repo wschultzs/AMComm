@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cpf-info-card',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cpf-info-card.component.scss']
 })
 export class CpfInfoCardComponent {
-
+  @Input() exibirConsulta: boolean = false;
 }

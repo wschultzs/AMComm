@@ -13,7 +13,7 @@ import { CpfInfoCardModule } from '../../cpf-info-card/cpf-info-card.module';
     CommonModule,
     CoreModule,
     CpfInfoCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [ CpfFormComponent ]
 })

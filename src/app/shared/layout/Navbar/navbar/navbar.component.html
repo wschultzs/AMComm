@@ -1,15 +1,14 @@
-<header class="header">
-  <div class="header-user">
-    <img src="user-image.jpg" alt="User Image" />
-    <button class="btn btn-primary">Button</button>
-  </div>
-</header>
 
-<nav class="sidebar">
-  <button class="btn btn-link" (click)="isCollapsed = !isCollapsed">
-    <h2>Sidebar</h2>
-  </button>
-  <div [ngbCollapse]="isCollapsed">
-    <ng-content></ng-content>
-  </div>
-</nav>
+  <nav class="sidebar">
+    <img
+      src="https://www.ailos.coop.br/wp-content/uploads/2021/06/Icone_App_App-Ailos.svg"
+      alt="Viacredi"
+      width="100"
+      height="100"
+    />
+    <button class="btn btn-link" (click)="isCollapsed = !isCollapsed">
+      <h2>Sidebar</h2>
+    </button>
+    <div [ngbCollapse]="isCollapsed"></div>
+  </nav>
+

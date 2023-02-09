@@ -4,26 +4,26 @@
   form {
     gap: 30px;
 
-    input, button {
+    input,
+    button {
       height: 40px;
     }
 
     #cpf-input {
-      width: 20%;
+      width: 200px;
     }
   }
-  
 }
 
 .informe-titulo {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 26px;
   color: #101213;
 }
 
 .informe-subtitulo {
   font-weight: 400;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 15px;
   color: #4f575e;
 }
@@ -33,4 +33,35 @@
   border: transparent;
   border-radius: 2px;
   color: white;
+}
+
+footer { 
+  position: absolute;
+  height: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  padding: 0px 1rem 0px 1rem;
+  color: #fff;
+
+  .row {
+    height: 80px;
+  }
+
+  .btn-iniciar {
+    background-color: #165c7d;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 15px;
+  }
+
+  .btn-dicas {
+    background-color: #fff;
+    color: #165c7d;
+    border: 1px solid #165c7d;
+    font-weight: 600;
+    margin-left: 15px;
+  }
 }

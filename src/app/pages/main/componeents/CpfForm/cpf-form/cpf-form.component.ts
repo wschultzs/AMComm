@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
-  FormGroup,
   Validators,
 } from '@angular/forms';
 import { Validacoes } from 'src/app/core/helpers/Validacoes';
@@ -12,7 +11,7 @@ import { Validacoes } from 'src/app/core/helpers/Validacoes';
   templateUrl: './cpf-form.component.html',
   styleUrls: ['./cpf-form.component.scss'],
 })
-export class CpfFormComponent implements OnInit {
+export class CpfFormComponent {
   constructor(private fb: FormBuilder) {}
 
   public consultaForm = this.fb.group({
@@ -22,5 +21,9 @@ export class CpfFormComponent implements OnInit {
     ),
   });
 
-  public ngOnInit(): void {}
+  public exibirConsulta: boolean = false;
+
+  public consultar(): void {
+    this.exibirConsulta = true;
+  }
 }
