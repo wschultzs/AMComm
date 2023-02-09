@@ -1,5 +1,18 @@
 .container-fluid {
   background-color: #d8d8d8;
+
+  form {
+    gap: 30px;
+
+    input, button {
+      height: 40px;
+    }
+
+    #cpf-input {
+      width: 20%;
+    }
+  }
+  
 }
 
 .informe-titulo {
