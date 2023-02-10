@@ -1,12 +1,38 @@
 .sidebar {
   background-color: #165c7d;
   height: 100vh;
-  
-  width: 200px;
+  width: fit-content;
   float: left;
 
   img {
     display: block;
     margin: 0 auto;
+  }
+
+  .menu-icon-wrapper {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #list-icon {
+      width: 30px;
+      height: 30px;
+      color: #739db1;
+    }
+  }
+
+  .icons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .icons {
+      width: 30px;
+      height: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
   }
 }
