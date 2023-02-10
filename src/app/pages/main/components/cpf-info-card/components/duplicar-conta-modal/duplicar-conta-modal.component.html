@@ -1,0 +1,21 @@
+<ng-template #duplicarConta let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Duplicar conta</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="fecharModal()"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <span
+      >O CPF já possui a <b>{{ tipoDeConta }}</b> na cooperativa.</span
+    >
+    <p>Deseja duplicar essa conta?</p>
+  </div>
+  <div class="modal-footer d-flex justify-content-end">
+    <button class="btn btn-voltar" (click)="fecharModal()">Voltar</button>
+    <button class="btn btn-duplicar">Duplicar</button>
+  </div>
+</ng-template>

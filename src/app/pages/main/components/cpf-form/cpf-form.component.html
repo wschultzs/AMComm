@@ -1,5 +1,6 @@
 <div class="container-fluid">
   <main>
+    <app-stepper></app-stepper>
     <div class="row">
       <div class="col-xs-12">
         <span class="informe-titulo"
@@ -28,7 +29,7 @@
 
           <button
             (click)="consultar()"
-            [disabled]="!consultaForm.valid"
+            [disabled]="consultaForm.invalid"
             class="btn btn-consultar"
           >
             Consultar por CPF
@@ -38,7 +39,7 @@
           class="text-danger"
           *ngIf="
             consultaForm.controls?.cpf?.value?.length === 14 &&
-            !consultaForm.valid
+            consultaForm.invalid
           "
         >
           CPF inválido, por favor verificar o valor inserido

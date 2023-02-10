@@ -40,7 +40,7 @@
       </div>
 
       <div class="row info">
-        <a href="#">Duplicar conta</a>
+        <a href="#" (click)="abrirDuplicarConta('conta aplicação')">Duplicar conta</a>
       </div>
     </div>
 
@@ -59,8 +59,9 @@
       </div>
 
       <div class="row info">
-        <a href="#">Duplicar conta</a>
+        <a href="#" (click)="abrirDuplicarConta('conta corrente')">Duplicar conta</a>
       </div>
     </div>
   </div>
 </div>
+<app-duplicar-conta-modal [tipoDeConta]="tipoDeConta"></app-duplicar-conta-modal>

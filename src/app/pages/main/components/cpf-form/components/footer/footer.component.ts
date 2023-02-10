@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subscription } from 'rxjs';
 import { ConsultaService } from 'src/app/shared/services/consulta.service';
 
@@ -10,7 +11,7 @@ import { ConsultaService } from 'src/app/shared/services/consulta.service';
 export class FooterComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
-  public exibirBotao = false;
+  public exibirBotao: boolean = false;
 
   constructor(private consultaService: ConsultaService) {}
 
@@ -22,5 +23,9 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  public abrirNovaAdmissao(): void {
+    
   }
 }

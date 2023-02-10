@@ -12,7 +12,7 @@ export class CpfMaskDirective {
   }
 
   @HostListener('blur') onBlur() {
-    this.el.nativeElement.value = this.unMask(this.el.nativeElement.value);
+    this.el.nativeElement.value = this.removerMascara(this.el.nativeElement.value);
   }
 
   @HostListener('input', ['$event']) onInput(event: any) {
@@ -20,33 +20,33 @@ export class CpfMaskDirective {
     this.el.nativeElement.value = this.cpfMask(input);
   }
 
-  cpfMask(value: string): string {
-    let maskedValue = '';
+  public cpfMask(value: string): string {
+    let mascara = '';
     let index = 0;
 
     for (const char of value) {
       if (!isNaN(parseInt(char, 10))) {
         if (index === 3 || index === 6) {
-          maskedValue += '.';
+          mascara += '.';
         } else if (index === 9) {
-          maskedValue += '-';
+          mascara += '-';
         }
-        maskedValue += char;
+        mascara += char;
         index++;
       }
     }
-    return maskedValue;
+    return mascara;
   }
 
-  unMask(value: string): string {
-    let unmaskedValue = '';
+  private removerMascara(value: string): string {
+    let valorSemMascara = '';
     
     for (const char of value) {
       if (!isNaN(parseInt(char, 10))) {
-        unmaskedValue += char;
+        valorSemMascara += char;
       }
     }
-    return unmaskedValue;
+    return valorSemMascara;
   }
 
 }

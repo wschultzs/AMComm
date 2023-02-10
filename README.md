@@ -1,27 +1,22 @@
-# AMCommAilos
+# Instruções para rodar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+- Realizar o clone do projeto
+- Rodar o comando npm install para instalar as dependências
+- Rodar o comando ng s para iniciar a aplicação
 
-## Development server
+## Tecnologias utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular v.15
+- NG-Bootstrap v.14.0.1
 
-## Code scaffolding
+## Cbservações gerais importantes
+Primeiramente, agradeço a oportunidade de realizar este teste.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Iniciei o teste na Quarta-feira, dia 08/02/2023 e finalizei hoje, Sexta-feira 10/02/2023.
+- Segui ao máximo todos os estilos aplicados no Figma que foi disponibilizado.
+- Além dos requisitos do teste (que era apenas a tela com input de CPF e exibição dos cards), fiz também o modal de "duplicar conta" que encontrei no Figma, para poder utilizar algumas ferramentas a mais do Angular para que vocês possam ter uma noção melhor do que consigo fazer com a framework.
+- Além do Bootstrap, nenhuma outra lib foi utilizada no desenvolvimento. Até mesmo a máscara de CPF do input foi criada por mim, em uma diretiva separada.
+- Criei a aplicação utilizando boilerplate de clean architecture que criei para a mesma, porém por o teste não possuir nenhum tipo de integração com back-end optei por não criar algumas camadas em que seriam localizados services de integração, models, interfaces, etc.
 
-## Build
+Novamente, agradeço a oportunidade e torço para que possamos trabalhar juntos em breve!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

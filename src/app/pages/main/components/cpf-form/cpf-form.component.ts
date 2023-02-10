@@ -24,7 +24,8 @@ export class CpfFormComponent {
   ) {}
 
   public consultar(): void {
-    this.exibirConsulta = !this.consultaService.exibicao;
     this.consultaService.alternarExibicao(!this.consultaService.exibicao);
+    
+    this.exibirConsulta = !this.consultaService.exibicao;
   }
 }

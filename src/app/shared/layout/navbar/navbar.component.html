@@ -1,4 +1,4 @@
-<nav class="sidebar d-none d-md-block" [ngbCollapse]="isCollapsed" [horizontal]="true">
+<nav class="sidebar d-none d-md-block">
   <img
     src="https://www.ailos.coop.br/wp-content/uploads/2021/06/Icone_App_App-Ailos.svg"
     loading="lazy"
@@ -7,15 +7,47 @@
     height="100"
   />
   <div class="menu-icon-wrapper">
-    <button class="btn btn-link" (click)="isCollapsed = !isCollapsed">
+    <button
+      (click)="collapse.toggle()"
+      type="button"
+      class="btn"
+      [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseExample"
+    >
       <bi name="list" id="list-icon"></bi>
     </button>
   </div>
-  <div class="icons-wrapper">
-    <bi name="search" class="icons"></bi>
-    <bi name="star" class="icons"></bi>
-    <bi name="chat-left-dots" class="icons"></bi>
-    <bi name="sliders" class="icons"></bi>
-    <bi name="bank" class="icons"></bi>
+  <div
+    #collapse="ngbCollapse"
+    style="max-width: 300px"
+    [(ngbCollapse)]="isCollapsed"
+    [horizontal]="true"
+  >
+    <div class="icons-wrapper">
+      <bi name="search" class="icons"></bi>
+      <bi name="star" class="icons"></bi>
+      <bi name="chat-left-dots" class="icons"></bi>
+      <bi name="sliders" class="icons"></bi>
+      <bi name="bank" class="icons"></bi>
+    </div>
   </div>
 </nav>
+<!-- <p>You need a width on the immediate child element for the animation to work correctly.</p>
+<p>
+	<button
+		type="button"
+		class="btn btn-outline-primary"
+		(click)="collapse.toggle()"
+		[attr.aria-expanded]="!isCollapsed"
+		aria-controls="collapseExample"
+	>
+		Toggle
+	</button>
+</p>
+<div style="min-height: 100px">
+	<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" style="max-width: 300px">
+		<div class="card" style="width: 300px">
+			<div class="card-body">You can collapse horizontally this card by clicking Toggle</div>
+		</div>
+	</div>
+</div> -->
