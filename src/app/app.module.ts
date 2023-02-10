@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CpfFormModule } from './pages/main/componeents/cpf-form/cpf-form.module';
-import { NavbarModule } from './shared/layout/navbar/navbar.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { NavbarModule } from './shared/layout/navbar/navbar.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CpfFormModule,
-    NavbarModule,
+    PagesModule,
     NgbModule
   ],
   providers: [],
