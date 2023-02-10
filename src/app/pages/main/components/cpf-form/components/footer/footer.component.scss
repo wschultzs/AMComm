@@ -1,0 +1,30 @@
+footer { 
+    position: absolute;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: auto;
+    padding: 0px 1rem 0px 1rem;
+    color: #fff;
+  
+    .row {
+      height: 80px;
+    }
+  
+    .btn-iniciar {
+      background-color: #165c7d;
+      color: #fff;
+      font-weight: 600;
+      margin-left: 15px;
+    }
+  
+    .btn-dicas {
+      background-color: #fff;
+      color: #165c7d;
+      border: 1px solid #165c7d;
+      font-weight: 600;
+      margin-left: 15px;
+    }
+  }

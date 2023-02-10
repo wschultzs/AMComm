@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Validacoes } from 'src/app/core/helpers/Validacoes';
+import { ConsultaService } from 'src/app/shared/services/consulta.service';
 
 @Component({
   selector: 'app-cpf-form',
@@ -12,8 +9,6 @@ import { Validacoes } from 'src/app/core/helpers/Validacoes';
   styleUrls: ['./cpf-form.component.scss'],
 })
 export class CpfFormComponent {
-  constructor(private fb: FormBuilder) {}
-
   public consultaForm = this.fb.group({
     cpf: new FormControl(
       '',
@@ -21,9 +16,15 @@ export class CpfFormComponent {
     ),
   });
 
-  public exibirConsulta: boolean = false;
+  public exibirConsulta: boolean;
+
+  constructor(
+    private fb: FormBuilder,
+    private consultaService: ConsultaService
+  ) {}
 
   public consultar(): void {
-    this.exibirConsulta = true;
+    this.exibirConsulta = !this.consultaService.exibicao;
+    this.consultaService.alternarExibicao(!this.consultaService.exibicao);
   }
 }
