@@ -1,4 +1,4 @@
-<nav class="sidebar d-none d-md-block">
+<nav class="sidebar d-none d-md-block" [ngbCollapse]="isCollapsed" [horizontal]="true">
   <img
     src="https://www.ailos.coop.br/wp-content/uploads/2021/06/Icone_App_App-Ailos.svg"
     alt="Viacredi"
@@ -10,7 +10,7 @@
       <bi name="list" id="list-icon"></bi>
     </button>
   </div>
-  <div [ngbCollapse]="isCollapsed" class="icons-wrapper">
+  <div class="icons-wrapper">
     <bi name="search" class="icons"></bi>
     <bi name="star" class="icons"></bi>
     <bi name="chat-left-dots" class="icons"></bi>

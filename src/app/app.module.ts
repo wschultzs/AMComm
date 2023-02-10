@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CpfFormModule } from './pages/main/componeents/CpfForm/cpf-form/cpf-form.module';
-import { NavbarModule } from './shared/layout/Navbar/navbar/navbar.module';
+import { CpfFormModule } from './pages/main/componeents/cpf-form/cpf-form.module';
+import { NavbarModule } from './shared/layout/navbar/navbar.module';
 
 @NgModule({
   declarations: [

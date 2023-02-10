@@ -48,3 +48,14 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .info-consulta, .info-situacao {
+    margin-left: 0;
+  }
+
+  .cards-wrapper {
+    padding: 0;
+    text-align: center;
+  }
+}
