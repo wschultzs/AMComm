@@ -6,7 +6,7 @@ export class Validacoes {
 
     let soma: number = 0;
     let resto: number;
-    let valido: boolean;
+    let valido = true;
 
     const regex = new RegExp('[0-9]{11}');
 
@@ -39,7 +39,6 @@ export class Validacoes {
 
       if (resto == 10 || resto == 11) resto = 0;
       if (resto != parseInt(cpf.substring(10, 11))) valido = false;
-      valido = true;
     }
 
     if (valido) return null;
